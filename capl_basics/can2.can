@@ -1,0 +1,35 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  int i_var = 1;
+}
+
+on sysvar dummy::sys_var_1
+{
+  write("from can2 dummy::sys_var_1 = %d", @dummy::sys_var_1);
+}
+
+on key 's'
+{
+  @dummy::sys_var_1 = 200;
+  write("pressed key = %c", this);
+  dummy_fun();
+}
+
+int dummy_fun()
+{
+  write("hello from user fun");
+  return 1;
+}
+
+//on message CAN1::EngineState
+//{
+//  write("hello from message event. %d", this.EngineSpeed);
+//  
+//}
+

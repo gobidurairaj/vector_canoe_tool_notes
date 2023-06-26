@@ -1,0 +1,25 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  message LightState ls;
+}
+
+on signal CAN1::Engine::EngineState::OnOff
+{
+  write("signal update event triggered");
+}
+
+on sysvar dummy::sys_var_1
+{
+  write("dummy::sys_var_1 value = %d", @dummy::sys_var_1);
+}
+
+on envVar env_var_1
+{
+  write("env_var_1 value = %d", @env_var_1);
+}
