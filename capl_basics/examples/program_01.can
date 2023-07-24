@@ -1,0 +1,10 @@
+/*@!Encoding:1252*/
+variables
+{
+  //  declare message
+  message CAN1::LightState msg_ls;
+}
+on key 'm'
+{
+  output(msg_ls);
+}
