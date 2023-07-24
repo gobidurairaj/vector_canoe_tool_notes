@@ -46,8 +46,6 @@ BO_ 801 LightState: 1 Light
 
 
 
-EV_ env_var_1: 0 [0|0] "" 0 1 DUMMY_NODE_VECTOR0 Vector__XXX;
-
 BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 0;
 BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
 BA_DEF_ BU_  "ILUsed" ENUM  "Yes","No";
