@@ -19,8 +19,8 @@
 
 |           | SIMULATION                             | ANALYSIS                             |
 | --------- | -------------------------------------- | ------------------------------------ |
-| CANoe     | ![img](doc_images/canoe_simulation.png)  | ![img](doc_images/canoe_analysis.png)  |
-| CANalyzer | ![](doc_images/canalyzer_simulation.png) | ![](doc_images/canalyzer_analysis.png) |
+| CANoe     | ![img](./doc_images/canoe_simulation.png)  | ![img](doc_images/canoe_analysis.PNG)  |
+| CANalyzer | ![](./doc_images/canalyzer_simulation.png) | ![](doc_images/canalyzer_analysis.PNG) |
 
 ## Programming Environment
 
