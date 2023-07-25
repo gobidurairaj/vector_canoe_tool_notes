@@ -19,14 +19,14 @@
 
 |           | SIMULATION                             | ANALYSIS                             |
 | --------- | -------------------------------------- | ------------------------------------ |
-| CANoe     | ![img](./doc_images/canoe_simulation.png)  | ![img](doc_images/canoe_analysis.PNG)  |
-| CANalyzer | ![](./doc_images/canalyzer_simulation.png) | ![](doc_images/canalyzer_analysis.PNG) |
+| CANoe     | ![canoe_simulation](./doc_images/canoe_simulation.png)  | ![canoe_analysis](doc_images/canoe_analysis.png)  |
+| CANalyzer | ![canalyzer_simulation](./doc_images/canalyzer_simulation.png) | ![canalyzer_analysis](./doc_images/canalyzer_analysis.png) |
 
 ## Programming Environment
 
-| CANoe     | ![](doc_images/canoe_capl_programming_env.png)     |
+| CANoe     | ![canoe_capl_programming_env](./doc_images/canoe_capl_programming_env.png)     |
 | --------- | ------------------------------------------------ |
-| CANalyzer | ![](doc_images/canalyzer_capl_programming_env.png) |
+| CANalyzer | ![canalyzer_capl_programming_env](./doc_images/canalyzer_capl_programming_env.png) |
 
 ## Variables
 
@@ -203,7 +203,7 @@ on timer tmr
 ### on key
 
 * With on key procedure you can execute defined actions with a key press.
-  ![on_key_options](doc_images/on_key_options.png)
+  ![on_key_options](./doc_images/on_key_options.png)
 
 ```c
 on key 'a'
@@ -256,9 +256,9 @@ on sysvar_update dummy::sys_var_1
 ### on message
 
 * The event procedure on message is called on the receipt of a valid CAN message.
-  ![message_decleration](doc_images/message_decleration.png)
-  ![message_selectors](doc_images/message_selectors.png)
-  ![message_access](doc_images/message_access.png)
+  ![message_decleration](./doc_images/message_decleration.png)
+  ![message_selectors](./doc_images/message_selectors.png)
+  ![message_access](./doc_images/message_access.png)
 
 ## user defined functions
 
@@ -344,8 +344,9 @@ on key 'b'
 
 ## Using CAPL for testing
 
-![canoe_test_env](doc_images/canoe_test_env.png)![test_module](doc_images/test_module.png)
-![test_setup](doc_images/test_setup.png)
+![canoe_test_env](./doc_images/canoe_test_env.png)
+![test_module](./doc_images/test_module.png)
+![test_setup](./doc_images/test_setup.png)
 
 ### Test Setup
 
@@ -375,38 +376,38 @@ on key 'b'
 
 ## **Examples based on use cases**
 
-### **[How to send a message manually using a keyboard ?](examples/program_01.can)**
+### **[How to send a message manually using a keyboard ?](./examples/program_01.can)**
 
-![send a message manually using a keyboard](examples/program_01.png)
+![send a message manually using a keyboard](./examples/program_01.png)
 
-### **[How to send a message periodically ?](examples/program_02.can)**
+### **[How to send a message periodically ?](./examples/program_02.can)**
 
-![program_02](examples/program_02.png)
+![program_02](./examples/program_02.png)
 
-### **[How to send a message based on a system event ?](examples/program_03.can)**
+### **[How to send a message based on a system event ?](./examples/program_03.can)**
 
-![program_03](examples/program_03.png)
+![program_03](./examples/program_03.png)
 
-### **[How to act and react based on the graphic panel inputs ?](examples/program_04.can)**
+### **[How to act and react based on the graphic panel inputs ?](./examples/program_04.can)**
 
-![program_04](examples/program_04.png)
+![program_04](./examples/program_04.png)
 
-### **[How to create a test case to check if a signal value is valid ?](examples/program_05.can)**
+### **[How to create a test case to check if a signal value is valid ?](./examples/program_05.can)**
 
-![program_05](examples/program_05.png)
+![program_05](./examples/program_05.png)
 
-### **[How to send a diagnostic message ?](examples/program_06.can)**
+### **[How to send a diagnostic message ?](./examples/program_06.can)**
 
-![program_06](examples/program_06.png)
+![program_06](./examples/program_06.png)
 
-### **[How to validate diagnostic messages ?](examples/program_07.can)**
+### **[How to validate diagnostic messages ?](./examples/program_07.can)**
 
-![program_07](examples/program_07.png)
+![program_07](./examples/program_07.png)
 
-### **[How to capture a graphic window screenshot and insert it in a report ?](examples/program_08.can)**
+### **[How to capture a graphic window screenshot and insert it in a report ?](./examples/program_08.can)**
 
 ![program_08](examples/program_08.png)
 
-### **[How to execute windows programs from a CAPL program ?](examples/program_09.can)**
+### **[How to execute windows programs from a CAPL program ?](./examples/program_09.can)**
 
-![program_09](examples/program_09.png)
+![program_09](./examples/program_09.png)
