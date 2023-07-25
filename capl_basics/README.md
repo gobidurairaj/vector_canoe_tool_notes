@@ -59,7 +59,6 @@ variables
     struct PairStructType { int first; int second } pair;
     struct PairStructType pair2;
 }
-
 on start
 {
     pair.first = 1;
@@ -70,15 +69,12 @@ on start
 ### Enumeration Types(enum)
 
 Enumeration types are defined in CAPL in exactly the same way as in C:
-
 enum Colors { Red, Green, Blue };
-
 Element names must be unique throughout the CAPL program.
 
 ### Associative Fields
 
 With associative fields (so-called maps) you can perform a 1:1 assignment of values to other values without using excessive memory. The elements of an associative field are key value pairs, whereby there is fast access to a value via a key.
-
 An associative field is declared in a similar way to a normal field but the data type of the key is written in square brackets:
 
 ```c
@@ -207,8 +203,7 @@ on timer tmr
 ### on key
 
 * With on key procedure you can execute defined actions with a key press.
-
-![on_key_options](doc_images/on_key_options.png)
+  ![on_key_options](doc_images/on_key_options.png)
 
 ```c
 on key 'a'
@@ -261,27 +256,50 @@ on sysvar_update dummy::sys_var_1
 ### on message
 
 * The event procedure on message is called on the receipt of a valid CAN message.
-
-![message_decleration](doc_images/message_decleration.png)
-
-![message_selectors](doc_images/message_selectors.png)
-
-![message_access](doc_images/message_access.png)
+  ![message_decleration](doc_images/message_decleration.png)
+  ![message_selectors](doc_images/message_selectors.png)
+  ![message_access](doc_images/message_access.png)
 
 ## user defined functions
 
+```c
+void dummy_user_func()
+{
+    int var_1 = 10;
+    write("hello from user function. valr_1 = %d", var_1)
+}
+```
+
+```c
+void dummy_user_func_with_params(int var_1)
+{
+    write("hello from user function. valr_1 = %d", var_1)
+}
+```
+
+```c
+int dummy_user_func_with_params_and_return(int var_1)
+{
+    write("hello from user function. valr_1 = %d", var_1)
+    return var_1*10
+}
+```
+
 ## "this" keyword
 
-* Within an event procedure for receiving a CAN object or an environment variable, the data structure of the object is designated by the keyword this.
-* The only event procedures that can use the this keyword are
-  * on message
-  * on envVar
-  * on key
-  * on errorframe (only to get the CAN channel number)
-  * on busOff
-  * on errorPassive
-  * on errorActive
-  * on warningLimit.
+* Within an event procedure for receiving a CAN object or an environment variable, the data structure of the object is designated by the keyword **this**.
+* The only event procedures that can use the **this** keyword are
+
+```c
+on message
+on envVar
+on key
+on errorframe   // only to get the CAN channel number
+on busOff
+on errorPassive
+on errorActive
+on warningLimit
+```
 
 For example, you could access the first data byte of message 100 which was just received by means of the following
 
@@ -314,7 +332,9 @@ on key 'a'
     startLogging();
     write("Logging Started");
 }
+```
 
+```c
 on key 'b'
 {
     stopLogging();
@@ -350,9 +370,8 @@ on key 'b'
 
 ### Test Report
 
-* The results from execution of a test module are recorded in a test report. A test report consists primarily of certain administrative information (such as the name of the test module, date of execution, etc.), information on the test cases executed and the results of the test. CANoe creates XML and HTML files to store test reports
-
-![img](doc_images/capl_test_script.png)
+* The results from execution of a test module are recorded in a test report. A test report consists primarily of certain administrative information (such as the name of the test module, date of execution, etc.), information on the test cases executed and the results of the test. CANoe creates XML and HTML files to store test reports.
+  ![img](doc_images/capl_test_script.png)
 
 ## **Examples based on use cases**
 
