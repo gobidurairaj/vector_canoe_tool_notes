@@ -17,15 +17,15 @@
 
 ## **Program Block**
 
-|           | SIMULATION                             | ANALYSIS                             |
-| --------- | -------------------------------------- | ------------------------------------ |
-| CANoe     | ![canoe_simulation](./doc_images/canoe_simulation.png)  | ![canoe_analysis](doc_images/canoe_analysis.png)  |
+|           | SIMULATION                                                   | ANALYSIS                                                 |
+| --------- | ------------------------------------------------------------ | -------------------------------------------------------- |
+| CANoe     | ![canoe_simulation](./doc_images/canoe_simulation.png)         | ![canoe_analysis](doc_images/canoe_analysis.png)           |
 | CANalyzer | ![canalyzer_simulation](./doc_images/canalyzer_simulation.png) | ![canalyzer_analysis](./doc_images/canalyzer_analysis.png) |
 
 ## Programming Environment
 
-| CANoe     | ![canoe_capl_programming_env](./doc_images/canoe_capl_programming_env.png)     |
-| --------- | ------------------------------------------------ |
+| CANoe     | ![canoe_capl_programming_env](./doc_images/canoe_capl_programming_env.png)         |
+| --------- | -------------------------------------------------------------------------------- |
 | CANalyzer | ![canalyzer_capl_programming_env](./doc_images/canalyzer_capl_programming_env.png) |
 
 ## Variables
@@ -203,7 +203,17 @@ on timer tmr
 ### on key
 
 * With on key procedure you can execute defined actions with a key press.
-  ![on_key_options](./doc_images/on_key_options.png)
+
+| Keystroke          | Event Procedure     | Occurs When                                            |
+| ------------------ | ------------------- | ------------------------------------------------------ |
+| a                  | on key 'a'          | lower case "a" key is pressed                          |
+| A                  | on key 'A'          | upper case "A" key is pressed                          |
+| A                  | on key 0x41         | upper case "A" key is pressed                          |
+| 2                  | on key '2'          | number "2" is pressed                                  |
+| $                  | on key '\\$'        | "\$" key is pressed                                    |
+| End                | on key End          | key "End" is pressed                                   |
+| Control + PageDown | on key ctrlPageDown | key "Control + Page Down" keys pressed                 |
+| any key            | on key *            | any key pressed other than already defined key events |
 
 ```c
 on key 'a'
@@ -256,9 +266,19 @@ on sysvar_update dummy::sys_var_1
 ### on message
 
 * The event procedure on message is called on the receipt of a valid CAN message.
-  ![message_decleration](./doc_images/message_decleration.png)
-  ![message_selectors](./doc_images/message_selectors.png)
-  ![message_access](./doc_images/message_access.png)
+
+| message event              | description                                                                                                |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| on message 123             | event triggered if message id 123 (decimal, standard identifier) received regardles of receiving chip      |
+| on message 123x            | event triggered if message id 123 (decimal, extended identifier) received regardles of receiving chip     |
+| on message 0x123           | event triggered if message id 123 (hexadecimal, standard identifier) received regardles of receiving chip |
+| on message 0x123x          | event triggered if message id 123 (hexadecimal, extended identifier) received regardles of receiving chip |
+| on message EngineData      | event triggered if message EngineData received regardles of receiving chip                               |
+| on message CAN1.123        | event triggered if message id 123 (decimal, standard identifier) received on CAN1                          |
+| on message *               | event triggered for all messages other than the defined message events in the same node                   |
+| on message CAN2.*          | event triggered for all messages other than the defined message events in the same node on CAN2           |
+| on message CAN2.[*]        | event triggered for all messages on CAN2                                                                 |
+| on message 50, 60, 100-200 | event triggered for messages 50, 60, and 100 to 200                                                        |
 
 ## user defined functions
 
