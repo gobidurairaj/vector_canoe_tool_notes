@@ -1,1 +1,3 @@
-# vector_canoe_demo_cfgs
+# vector CANoe demo configurations notes
+
+* CAPL programming documentation 👉 [link](./capl_basics/README.md)
