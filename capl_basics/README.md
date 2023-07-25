@@ -19,7 +19,7 @@
 
 |           | SIMULATION                                                   | ANALYSIS                                                 |
 | --------- | ------------------------------------------------------------ | -------------------------------------------------------- |
-| CANoe     | ![canoe_simulation](./doc_images/canoe_simulation.png)         | ![canoe_analysis](doc_images/canoe_analysis.png)           |
+| CANoe     | ![canoe_simulation](./doc_images/canoe_simulation.png)         | ![canoe_analysis](./doc_images/canoe_analysis.png)           |
 | CANalyzer | ![canalyzer_simulation](./doc_images/canalyzer_simulation.png) | ![canalyzer_analysis](./doc_images/canalyzer_analysis.png) |
 
 ## Programming Environment
@@ -392,7 +392,7 @@ on key 'b'
 ### Test Report
 
 * The results from execution of a test module are recorded in a test report. A test report consists primarily of certain administrative information (such as the name of the test module, date of execution, etc.), information on the test cases executed and the results of the test. CANoe creates XML and HTML files to store test reports.
-  ![img](doc_images/capl_test_script.png)
+  ![img](./doc_images/capl_test_script.png)
 
 ## **Examples based on use cases**
 
@@ -426,7 +426,7 @@ on key 'b'
 
 ### **[How to capture a graphic window screenshot and insert it in a report ?](./examples/program_08.can)**
 
-![program_08](examples/program_08.png)
+![program_08](./examples/program_08.png)
 
 ### **[How to execute windows programs from a CAPL program ?](./examples/program_09.can)**
 
